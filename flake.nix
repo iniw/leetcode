@@ -1,9 +1,9 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     flake-utils.url = "github:numtide/flake-utils";
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
+    fenix = {
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -12,23 +12,40 @@
     {
       self,
       nixpkgs,
-      rust-overlay,
+      fenix,
       flake-utils,
     }:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        overlays = [ (import rust-overlay) ];
+        overlays = [ (import "${fenix}/overlay.nix") ];
         pkgs = import nixpkgs { inherit system overlays; };
-        rust-toolchain = pkgs.rust-bin.stable.latest.default.override {
-          extensions = [
-            "rust-analyzer"
-            "rust-src"
-          ];
-        };
+
+        rust-toolchain = pkgs.fenix.stable.withComponents [
+          "cargo"
+          "clippy"
+          "rust-analyzer"
+          "rust-src"
+          "rustc"
+          "rustfmt"
+        ];
+
+        llvm = pkgs.llvmPackages_19;
       in
       {
-        devShells.default = with pkgs; mkShell { packages = [ rust-toolchain ]; };
+        devShells.default =
+          with pkgs;
+          mkShell.override { stdenv = llvm.libcxxStdenv; } {
+            nativeBuildInputs = [
+              # rust
+              rust-toolchain
+
+              # c++
+              cmake
+              ninja
+              (llvm.clang-tools.override { enableLibcxx = true; })
+            ];
+          };
       }
     );
 }
