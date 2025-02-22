@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     fenix = {
       url = "github:nix-community/fenix";
@@ -29,23 +29,19 @@
           "rustc"
           "rustfmt"
         ];
-
-        llvm = pkgs.llvmPackages_19;
       in
       {
-        devShells.default =
-          with pkgs;
-          mkShell.override { stdenv = llvm.libcxxStdenv; } {
-            nativeBuildInputs = [
-              # rust
-              rust-toolchain
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            # rust
+            rust-toolchain
 
-              # c++
-              cmake
-              ninja
-              (llvm.clang-tools.override { enableLibcxx = true; })
-            ];
-          };
+            # c++
+            cmake
+            ninja
+            clang-tools
+          ];
+        };
       }
     );
 }
