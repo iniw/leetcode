@@ -8,10 +8,10 @@ public:
         size_t v = 0;
 
         size_t stream = num1;
-        for (size_t n = 0; n < std::popcount(size_t(num2)); ++n) {
+        for (int n = 0; n < std::popcount(static_cast<size_t>(num2)); ++n) {
             if (stream != 0) {
                 size_t lz = std::countl_zero(stream);
-                size_t nth = sizeof(stream) * CHAR_BIT - lz - 1;
+                size_t nth = (sizeof(stream) * CHAR_BIT) - lz - 1;
                 v |= 1 << nth;
                 stream &= ~(1 << nth);
             } else {
@@ -19,7 +19,7 @@ public:
             }
         }
 
-        return v;
+        return static_cast<int>(v);
     }
 };
 

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <print>
 #include <vector>
 
@@ -9,9 +10,7 @@ public:
             for (size_t j = i + 1; j < nums.size() - 1; ++j) {
                 for (size_t k = j + 1; k < nums.size(); ++k) {
                     auto r = (int64_t(nums[i]) - int64_t(nums[j])) * int64_t(nums[k]);
-                    if (r > max) {
-                        max = r;
-                    }
+                    max = std::max(r, max);
                 }
             }
         }

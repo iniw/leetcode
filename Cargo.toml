@@ -1,0 +1,19 @@
+[package]
+name = "leetcode"
+version = "0.1.0"
+edition = "2024"
+
+# https://leetcode.com/problems/median-of-two-sorted-arrays/
+[[bin]]
+name = "4"
+path = "problems/4.rs"
+
+# https://leetcode.com/problems/string-to-integer-atoi/
+[[bin]]
+name = "8"
+path = "problems/8.rs"
+
+# https://leetcode.com/problems/valid-number/
+[[bin]]
+name = "65"
+path = "problems/65.rs"

@@ -2,7 +2,7 @@
 #include <print>
 #include <vector>
 
-constexpr uint32_t explode_byte(uint8_t byte) {
+static constexpr uint32_t explode_byte(uint8_t byte) {
     return (uint32_t(byte) << 0) | (uint32_t(byte) << 8) | (uint32_t(byte) << 16) | (uint32_t(byte) << 24);
 }
 
