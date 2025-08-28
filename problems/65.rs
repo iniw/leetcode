@@ -67,7 +67,5 @@ enum Found {
 struct Solution;
 
 fn main() {
-    use std::env;
-    let n = env::args().nth(1).expect("input");
-    println!("is_number = {}", Solution::is_number(n));
+    assert_eq!(Solution::is_number("123".to_owned()), true);
 }

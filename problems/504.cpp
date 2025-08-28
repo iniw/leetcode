@@ -1,6 +1,4 @@
-#include <bit>
 #include <print>
-#include <vector>
 
 class Solution {
 public:
@@ -10,7 +8,7 @@ public:
         int count = 0;
         while (num != 0) {
             auto [quot, rem] = std::div(num, 7);
-            result += rem * std::pow(10, count++);
+            result += rem * static_cast<int>(std::pow(10, count++));
             num = quot;
         }
 

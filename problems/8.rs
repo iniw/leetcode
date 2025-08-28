@@ -15,18 +15,15 @@ impl Solution {
                 .saturating_add(c as i32 - '0' as i32);
         }
 
-        if is_negative {
-            -result
-        } else {
-            result
-        }
+        if is_negative { -result } else { result }
     }
 }
 
 struct Solution;
 
 fn main() {
-    dbg!(Solution::my_atoi(
-        "-001000000000000000000000000000".to_owned()
-    ));
+    assert_eq!(
+        Solution::my_atoi("-001000000000000000000000000000".to_owned()),
+        -2147483647
+    );
 }

@@ -1,45 +1,30 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      fenix,
-      flake-utils,
-    }:
-    flake-utils.lib.eachDefaultSystem (
+    inputs:
+    inputs.flake-utils.lib.eachDefaultSystem (
       system:
       let
-        overlays = [ (import "${fenix}/overlay.nix") ];
-        pkgs = import nixpkgs { inherit system overlays; };
-
-        rust-toolchain = pkgs.fenix.stable.withComponents [
-          "cargo"
-          "clippy"
-          "rust-analyzer"
-          "rust-src"
-          "rustc"
-          "rustfmt"
-        ];
+        pkgs = import inputs.nixpkgs { inherit system; };
       in
       {
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            # rust
-            rust-toolchain
-
-            # c++
+          packages = with pkgs; [
+            # C++
             cmake
             ninja
             clang-tools
+
+            # Rust
+            cargo
+            clippy
+            rust-analyzer
+            rustc
+            rustfmt
           ];
         };
       }

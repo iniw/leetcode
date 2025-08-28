@@ -62,9 +62,11 @@ impl Solution {
 struct Solution;
 
 fn main() {
-    let median = Solution::find_median_sorted_arrays(
-        vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4],
-        vec![1, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+    assert_eq!(
+        Solution::find_median_sorted_arrays(
+            vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4],
+            vec![1, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+        ),
+        3.0
     );
-    dbg!(median);
 }
