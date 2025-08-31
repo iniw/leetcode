@@ -22,3 +22,8 @@ path = "problems/65.rs"
 [[bin]]
 name = "825"
 path = "problems/825.rs"
+
+# https://leetcode.com/problems/distribute-candies-among-children-i/
+[[bin]]
+name = "2928"
+path = "problems/2928.rs"
