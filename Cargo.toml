@@ -3,47 +3,47 @@ name = "leetcode"
 version = "0.1.0"
 edition = "2024"
 
-# https://leetcode.com/problems/two-sum/
+# Two Sum
 [[bin]]
 name = "1"
 path = "problems/1.rs"
 
-# https://leetcode.com/problems/longest-substring-without-repeating-characters/
+# Longest Substring Without Repeating Characters
 [[bin]]
 name = "3"
 path = "problems/3.rs"
 
-# https://leetcode.com/problems/median-of-two-sorted-arrays/
+# Median Of Two Sorted Arrays
 [[bin]]
 name = "4"
 path = "problems/4.rs"
 
-# https://leetcode.com/problems/longest-palindromic-substring/
+# Longest Palindromic Substring
 [[bin]]
 name = "5"
 path = "problems/5.rs"
 
-# https://leetcode.com/problems/string-to-integer-atoi/
+# String To Integer Atoi
 [[bin]]
 name = "8"
 path = "problems/8.rs"
 
-# https://leetcode.com/problems/valid-number/
+# Valid Number
 [[bin]]
 name = "65"
 path = "problems/65.rs"
 
-# https://leetcode.com/problems/longest-consecutive-sequence/
+# Longest Consecutive Sequence
 [[bin]]
 name = "128"
 path = "problems/128.rs"
 
-# https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/
+# Count Unique Characters Of All Substrings Of A Given String
 [[bin]]
 name = "825"
 path = "problems/825.rs"
 
-# https://leetcode.com/problems/distribute-candies-among-children-i/
+# Distribute Candies Among Children I
 [[bin]]
 name = "2928"
 path = "problems/2928.rs"
