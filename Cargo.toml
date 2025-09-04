@@ -18,6 +18,11 @@ path = "problems/3.rs"
 name = "4"
 path = "problems/4.rs"
 
+# https://leetcode.com/problems/longest-palindromic-substring/
+[[bin]]
+name = "5"
+path = "problems/5.rs"
+
 # https://leetcode.com/problems/string-to-integer-atoi/
 [[bin]]
 name = "8"
