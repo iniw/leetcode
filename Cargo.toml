@@ -8,6 +8,11 @@ edition = "2024"
 name = "1"
 path = "problems/1.rs"
 
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/
+[[bin]]
+name = "3"
+path = "problems/3.rs"
+
 # https://leetcode.com/problems/median-of-two-sorted-arrays/
 [[bin]]
 name = "4"
