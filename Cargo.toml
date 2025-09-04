@@ -3,6 +3,11 @@ name = "leetcode"
 version = "0.1.0"
 edition = "2024"
 
+# https://leetcode.com/problems/two-sum/
+[[bin]]
+name = "1"
+path = "problems/1.rs"
+
 # https://leetcode.com/problems/median-of-two-sorted-arrays/
 [[bin]]
 name = "4"
