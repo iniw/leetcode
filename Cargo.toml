@@ -38,6 +38,11 @@ path = "problems/65.rs"
 name = "128"
 path = "problems/128.rs"
 
+# Palindromic Substrings
+[[bin]]
+name = "647"
+path = "problems/647.rs"
+
 # Count Unique Characters Of All Substrings Of A Given String
 [[bin]]
 name = "825"
