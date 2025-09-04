@@ -16,23 +16,23 @@ function(problem id)
   target_link_options(${id} PRIVATE $<$<CONFIG:Debug>:-fno-omit-frame-pointer;-fsanitize=undefined;-fsanitize=address>)
 endfunction()
 
-# https://leetcode.com/problems/base-7/
+# Base 7
 problem(504)
 
-# https://leetcode.com/problems/reverse-string-ii/
+# Reverse String II
 problem(541)
 
-# https://leetcode.com/problems/longest-happy-prefix/
+# Longest Happy Prefix
 problem(1392)
 
-# https://leetcode.com/problems/minimize-xor/
+# Minimize Xor
 problem(2429)
 
-# https://leetcode.com/problems/number-of-even-and-odd-bits/
+# Number Of Even And Odd Bits
 problem(2595)
 
-# https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/
+# Make String A Subsequence Using Cyclic Increments
 problem(2825)
 
-# https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-i/
+# Maximum Value Of An Ordered Triplet I
 problem(2873)
