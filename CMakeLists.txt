@@ -19,6 +19,9 @@ endfunction()
 # Base 7
 problem(504)
 
+# Linked List Cycle
+problem(141)
+
 # Reverse String II
 problem(541)
 
