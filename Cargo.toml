@@ -43,6 +43,11 @@ path = "problems/65.rs"
 name = "128"
 path = "problems/128.rs"
 
+# Word Break
+[[bin]]
+name = "139"
+path = "problems/139.rs"
+
 # Palindromic Substrings
 [[bin]]
 name = "647"
