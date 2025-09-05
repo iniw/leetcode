@@ -48,6 +48,11 @@ path = "problems/128.rs"
 name = "139"
 path = "problems/139.rs"
 
+# Missing Number
+[[bin]]
+name = "268"
+path = "problems/268.rs"
+
 # Palindromic Substrings
 [[bin]]
 name = "647"
