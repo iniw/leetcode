@@ -28,6 +28,11 @@ path = "problems/5.rs"
 name = "8"
 path = "problems/8.rs"
 
+# Container With Most Water
+[[bin]]
+name = "11"
+path = "problems/11.rs"
+
 # Valid Number
 [[bin]]
 name = "65"
