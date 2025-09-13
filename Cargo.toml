@@ -33,6 +33,11 @@ path = "problems/8.rs"
 name = "11"
 path = "problems/11.rs"
 
+# Valid Parentheses
+[[bin]]
+name = "20"
+path = "problems/20.rs"
+
 # Valid Number
 [[bin]]
 name = "65"
