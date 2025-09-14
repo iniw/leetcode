@@ -53,6 +53,11 @@ path = "problems/128.rs"
 name = "139"
 path = "problems/139.rs"
 
+# Maximum Product Subarray
+[[bin]]
+name = "152"
+path = "problems/152.rs"
+
 # Missing Number
 [[bin]]
 name = "268"
