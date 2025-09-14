@@ -38,6 +38,11 @@ path = "problems/11.rs"
 name = "20"
 path = "problems/20.rs"
 
+# Search in Rotated Sorted Array
+[[bin]]
+name = "33"
+path = "problems/33.rs"
+
 # Valid Number
 [[bin]]
 name = "65"
