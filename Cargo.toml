@@ -58,6 +58,11 @@ path = "problems/139.rs"
 name = "152"
 path = "problems/152.rs"
 
+# Find Minimum in Rotated Sorted Array
+[[bin]]
+name = "153"
+path = "problems/153.rs"
+
 # Missing Number
 [[bin]]
 name = "268"
